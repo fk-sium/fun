@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EID.EXE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    overflow:hidden;
+    background:#050816;
+    font-family:'Inter',sans-serif;
+}
+
+canvas{
+    position:fixed;
+    inset:0;
+}
+
+.scene{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#1a2a6c 0%,#0d1022 40%,#02030a 100%);
+}
+
+/* cinematic grain */
+.scene::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background-image:
+    repeating-linear-gradient(
+        rgba(255,255,255,.02) 0px,
+        rgba(255,255,255,.02) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    mix-blend-mode:overlay;
+    pointer-events:none;
+    opacity:.25;
+}
+
+/* ===========================
+TITLE
+=========================== */
+
+.titleWrap{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:100;
+    text-align:center;
+    pointer-events:none;
+}
+
+.title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(90px,18vw,280px);
+    line-height:.9;
+    color:white;
+    letter-spacing:8px;
+
+    text-shadow:
+</html>
